@@ -1,7 +1,33 @@
 import {View, Text, StyleSheet, Button, TextInput} from 'react-native';
-
+import{ useState } from 'react';
 
 export default function App() {
+
+  const[valor1, setValor1] = useState(0)
+  const[valor2, setValor2] = useState(0)
+  const[resultado, setResultado] = useState(0)
+
+  function somar(){
+    setResultado(Number(valor1) + Number(valor2))
+  }
+
+  function subtrair(){
+    setResultado(Number(valor1) - Number(valor2))
+  }
+
+  function multiplicar(){
+    setResultado(Number(valor1) * Number(valor2))
+  }
+
+  function dividir(){
+    if (Number(valor2) === 0){
+      setResultado('Error');
+    } else{
+      setResultado(Number(valor1)/Number(valor2));
+    }
+
+  }
+
   return (
     <View style={styles.container}>
 
@@ -12,11 +38,13 @@ export default function App() {
     </View>
       
     <TextInput
+      onChangeText={setValor1}
       placeholder='valor 01'
       style={styles.valor1} 
     />
 
     <TextInput
+      onChangeText={setValor2}
       placeholder='valor 02'
       style={styles.valor2} 
     />
@@ -24,26 +52,26 @@ export default function App() {
 
     <View style={styles.botoes}> 
       <View style={styles.somar1}>
-        <Button title='Somar' color={'green'}/>
+        <Button title='Somar' color={'green'} onPress={somar}/>
       </View>
 
       <View style={styles.subtrair1}>
-        <Button title='Subtrair' color={'pink'}/>
+        <Button title='Subtrair' color={'pink'} onPress={subtrair}/>
       </View>
 
       <View style={styles.multiplicar1}>
-        <Button title='Multiplicar' color={'red'}/>
+        <Button title='Multiplicar' color={'red'} onPress={multiplicar}/>
       </View>
 
       <View style={styles.dividir1}>
-        <Button title='Dividir' color={'blue'}/>
+        <Button title='Dividir' color={'blue'} onPress={dividir}/>
       </View>
 
 
     </View>
 
     <View style={styles.calcular}>
-      <Text style={styles.textocalcular}> 0 </Text>
+      <Text style={styles.textocalcular}> {resultado} </Text>
     </View>
 
     </View>
