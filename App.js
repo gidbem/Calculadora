@@ -24,21 +24,22 @@ export default function App() {
 
     <View style={styles.botoes}> 
       <View style={styles.somar1}>
-        <Text style={{ color: 'white', fontWeight: 'bold', marginLeft: 7, marginTop: 3 }}>SOMAR</Text>
+        <Button title='Somar' color={'green'}/>
       </View>
 
-
       <View style={styles.subtrair1}>
-        <Text style={{ color: 'white', fontWeight: 'bold', marginLeft: 7, marginTop: 3 }}>SUBTRAIR</Text>
+        <Button title='Subtrair' color={'pink'}/>
       </View>
 
       <View style={styles.multiplicar1}>
-        <Text style={{ color: 'white', fontWeight: 'bold', marginLeft: 9, marginTop: 3 }}>MULTIPLICAR</Text>
+        <Button title='Multiplicar' color={'red'}/>
       </View>
-    
+
       <View style={styles.dividir1}>
-        <Text style={{ color: 'white', fontWeight: 'bold', marginLeft: 7, marginTop: 3 }}>DIVIDIR</Text>
+        <Button title='Dividir' color={'blue'}/>
       </View>
+
+
     </View>
 
     <View style={styles.calcular}>
@@ -56,9 +57,11 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
     alignItems: 'center',
 
+    
+
   }, calculadora: {
     fontSize: 26,
-    marginLeft: 70,
+    marginLeft: 110,
     marginTop: 5,
 
   },
@@ -68,7 +71,7 @@ const styles = StyleSheet.create({
     borderColor: 'black',
     borderRadius: 10,
     marginTop: 250,
-    width: 311,
+    width: 400,
     height: 50,
   },
   valor1: {
@@ -76,7 +79,7 @@ const styles = StyleSheet.create({
     borderColor: 'black',
     borderRadius: 10,
     marginTop: 10,
-    width: 311,
+    width: 400,
     height: 50,
     fontSize: 15,
     color: 'red',
@@ -86,7 +89,7 @@ const styles = StyleSheet.create({
     borderColor: 'black',
     borderRadius: 10,
     marginTop: 10,
-    width: 311,
+    width: 400,
     height: 50,
     fontSize: 15,
     color: 'red',
@@ -96,8 +99,8 @@ const styles = StyleSheet.create({
     borderWidth: 2,
     borderColor: 'darkgreen',
     marginTop: 10,
-    width:67,
-    height: 30,
+    width:90,
+    height: 40,
     color: 'white',
     marginRight: 5,
   },
@@ -105,8 +108,8 @@ const styles = StyleSheet.create({
     backgroundColor: 'pink',
     border: '2px solid lightpink',
     marginTop: 10,
-    width: 83,
-    height: 30,
+    width: 90,
+    height: 40,
     color: 'white',
     marginRight: 5,
 
@@ -115,8 +118,8 @@ const styles = StyleSheet.create({
     backgroundColor: 'blue',
     border: '2px solid lightblue',
     marginTop: 10,
-    width: 67,
-    height: 30,
+    width: 90,
+    height: 40,
     color: 'white',
 
   },
@@ -125,7 +128,7 @@ const styles = StyleSheet.create({
     border: '2px solid darkred',
     marginTop: 10,
     width: 110,
-    height: 30,
+    height: 40,
     color: 'white',
     marginRight: 5,
 
@@ -142,7 +145,7 @@ const styles = StyleSheet.create({
     width: 300,
     marginTop: 40,
     borderRadius: 10,
-    marginLeft: 10
+    marginLeft: 50
   },
   textocalcular: {
     marginLeft: 130,
